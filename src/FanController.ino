@@ -125,16 +125,25 @@ constexpr uint8_t FAN_PERCENT[6] = {
 // ============================================================
 // FAN LEVELS
 // ============================================================
+
+// 
 constexpr float THRESHOLDS_C[5] = {
-  42.0F,  // T1: 20%
-  48.0F,  // T2: 40%
-  54.0F,  // T3: 60%
-  60.0F,  // T4: 80%
+  40.0F,  // T1: 20%
+  46.5F,  // T2: 40%
+  53.0F,  // T3: 60%
+  59.5F,  // T4: 80%
   66.0F   // T5: 100%
 };
 
+// constexpr float THRESHOLDS_C[5] = {
+//   39.0F,  // T1: 20%
+//   45.8F,  // T2: 40%
+//   52.5F,  // T3: 60%
+//   59.3F,  // T4: 80%
+//   66.0F   // T5: 100%
+// };
 
-constexpr float LEVEL_HYSTERESIS_C = 2.0F;
+constexpr float LEVEL_HYSTERESIS_C = 1.0F;
 
 
 // ============================================================
@@ -158,7 +167,7 @@ constexpr float PANIC_CLEAR_TEMPERATURE_C =
 // ============================================================
 
 constexpr unsigned long TEMPERATURE_INTERVAL_MS =
-  1000UL;
+  5000UL;
 
 constexpr unsigned long ALARM_BLINK_INTERVAL_MS =
   400UL;
